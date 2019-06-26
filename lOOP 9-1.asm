@@ -1,0 +1,29 @@
+.MODEL SMALL
+.DATA
+   
+.CODE 
+
+MOV CX,9
+MOV DL,3AH 
+
+
+COUNT:
+
+ 
+SUB DL,1
+
+CMP CX,0   
+
+JE END
+
+MOV AH,2
+
+
+INT 21H
+
+LOOP COUNT
+
+END:
+MOV AH,4CH
+INT 21H
+
